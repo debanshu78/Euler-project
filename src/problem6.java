@@ -12,15 +12,11 @@ Find the difference between the sum of the squares of the first one hundred natu
 public class problem6 {
 
 	public static void main(String[] args) {
-int sum=0;
-int sum1=0;
-int diff=0;
-for(int i=1;i<=100;i++)
-{
-	sum=sum+(i*i);
-	sum1=sum1+i;
-}
-diff=(sum1*sum1)-sum;
+long n=(100*101)/2;
+long sumsquare=n*n;
+
+long squaresum=(100*(100+1)*(2*100+1))/6;
+long diff=sumsquare-squaresum;
 System.out.println("Difference="+ diff);
 
 	}
