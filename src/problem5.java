@@ -12,7 +12,7 @@ x:
 while(n>1)
 {
 	boolean d=true;
-	for(int i=6;i<=t;i++)
+	for(int i=2;i<=t;i++)
 	{
 		
 		if(n%i==0)
