@@ -2,27 +2,41 @@
 
 What is the 10 001st prime number*/
 
-public class problem5 {
-public static int gcd(int num1,int num2)
+
+public class problem7 {
+	static boolean primchek(int n)
+	{
+	if(n%2==0)
+	{
+		return false;
+	}
+	for(int i=3;i*i<=n;i=i+2)
+	{
+		if(n%i==0)
+		{
+			return false;
+		}
+	}
+	return true;
+	}
+public static void postionPrime(int n)
 {
-	int gcd=1;
-	for(int i = 1; i <= num1 && i <= num2; i++)
-    {
-        if(num1%i==0 && num2%i==0)
-            gcd = i;
-    }
-	return gcd;
+	int i=3;
+	int count=2;
+	while(count<=n)
+	{
+		if(primchek(i))
+		{
+			count++;
+		}
+		i=i+2;
+	}
+	System.out.println(i-2);
+    
+
 }
 	public static void main(String[] args) {
-	int lcm=1;
-	for(int i=1;i<=20;i++)
-	{
-		int num=gcd(i,lcm);
-		lcm=lcm/num*i;
-	}
-	System.out.println(lcm);
+postionPrime(10001);
 	}
 
 }
-
-
