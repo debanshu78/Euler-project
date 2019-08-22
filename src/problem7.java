@@ -6,6 +6,10 @@ What is the 10 001st prime number*/
 public class problem7 {
 	static boolean primchek(int n)
 	{
+        if(n==2)
+	{
+		return true;
+	}
 	if(n%2==0)
 	{
 		return false;
@@ -21,17 +25,17 @@ public class problem7 {
 	}
 public static void postionPrime(int n)
 {
-	int i=3;
-	int count=2;
+	int i=1;
+	int count=0;
 	while(count<=n)
 	{
 		if(primchek(i))
 		{
 			count++;
 		}
-		i=i+2;
+		i=i+1;
 	}
-	System.out.println(i-2);
+	System.out.println(i-1);
     
 
 }
