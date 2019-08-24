@@ -25,17 +25,17 @@ public class problem7 {
 	}
 public static void postionPrime(int n)
 {
-	int i=1;
-	int count=0;
+	int i=3;
+	int count=2;
 	while(count<=n)
 	{
 		if(primchek(i))
 		{
 			count++;
 		}
-		i=i+1;
+		i=i+2;
 	}
-	System.out.println(i-1);
+	System.out.println(i-2);
     
 
 }
